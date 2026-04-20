@@ -13,14 +13,14 @@ pub fn parse_derive_input(input: &DeriveInput) -> Result<Vec<FieldBinding>> {
                 return Err(Error::new_spanned(
                     &input.ident,
                     "Bind: only named-field structs are supported",
-                ))
+                ));
             }
         },
         _ => {
             return Err(Error::new_spanned(
                 &input.ident,
                 "Bind: only structs are supported",
-            ))
+            ));
         }
     };
 
@@ -40,7 +40,10 @@ fn parse_field(field: &Field) -> Result<FieldBinding> {
         .ok_or_else(|| {
             Error::new_spanned(
                 &ident,
-                format!("Bind: field `{}` missing #[dotenv(\"VAR\")] attribute", ident),
+                format!(
+                    "Bind: field `{}` missing #[dotenv(\"VAR\")] attribute",
+                    ident
+                ),
             )
         })?;
 
