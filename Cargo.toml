@@ -1,8 +1,16 @@
 [package]
-name = "dotenvy-derive"
-version = "0.15.0"
+authors = ["flejz <flejz@protonmail.com>"]
+categories = ["development-tools"]
+description = "Proc macro to derive compile-time struct initialization from .env files via dotenvy_macro."
+documentation = "https://docs.rs/dotenvy-derive"
 edition = "2024"
+homepage = "https://github.com/flejz/dotenvy_derive"
+keywords = ["dotenvy", "dotenv", "derive", "env", "macro"]
 license = "MIT"
+name = "dotenvy-derive"
+readme = "README.md"
+repository = "https://github.com/flejz/dotenvy_derive"
+version = "0.15.7"
 
 [lib]
 proc-macro = true
